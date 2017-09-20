@@ -3,16 +3,10 @@
 This plugin provides support for testing whether file-like objects are properly
 closed.
 """
-from __future__ import (absolute_import, division, print_function,
-                        unicode_literals)
-
 import imp
 import os
 
-try:
-    import importlib.machinery as importlib_machinery
-except ImportError:  # Python 2.7
-    importlib_machinery = None
+import importlib.machinery as importlib_machinery
 
 
 def pytest_addoption(parser):
