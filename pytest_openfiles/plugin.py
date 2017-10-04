@@ -6,7 +6,10 @@ closed.
 import imp
 import os
 
-import importlib.machinery as importlib_machinery
+try:
+    import importlib.machinery as importlib_machinery
+except ImportError:
+    importlib_machinery = None
 
 
 def pytest_addoption(parser):
