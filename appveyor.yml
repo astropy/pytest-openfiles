@@ -18,7 +18,7 @@ environment:
       - PYTHON_VERSION: "2.7"
         PYTEST_VESION: "2.8"
         PYTEST_COMMAND: "py.test"
-        platform: x86
+        platform: x64
 
       - PYTHON_VERSION: "2.7"
         platform: x64
@@ -30,6 +30,9 @@ environment:
       - PYTHON_VERSION: "3.6"
         PYTEST_VERSION: "3.1"
         platform: x64
+
+      - PYTHON_VERSION: "3.6"
+        platform: x86
 
       - PYTHON_VERSION: "3.6"
         platform: x64
