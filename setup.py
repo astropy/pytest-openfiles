@@ -41,7 +41,7 @@ setup(
         'Topic :: Software Development :: Testing',
         'Topic :: Utilities',
     ],
-    keywords=[ 'remote', 'data', 'pytest', 'py.test' ],
+    keywords=[ 'detect', 'open', 'file', 'handle', 'psutil', 'pytest', 'py.test' ],
     install_requires=[ 'pytest>=2.8.0', 'psutil' ],
     tests_require=[ 'astropy' ],
     python_requires='>=2.7',
