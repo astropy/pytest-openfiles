@@ -14,7 +14,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='pytest-openfiles',
-    version='0.1.0',
+    version='0.2.0.dev',
     license='BSD',
     description='Pytest plugin for detecting inadvertent open file handles',
     author='The Astropy Developers',
