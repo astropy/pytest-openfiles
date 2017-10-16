@@ -4,4 +4,7 @@ include CHANGES.rst
 
 include setup.cfg
 
+include tests/*.py
+include tests/data/*.txt
+
 global-exclude *.pyc *.o
