@@ -12,11 +12,17 @@ from os.path import splitext
 from setuptools import setup, find_packages
 
 
+def readme():
+    with open('README.rst') as ff:
+        return ff.read()
+
+
 setup(
     name='pytest-openfiles',
     version='0.2.0.dev',
     license='BSD',
     description='Pytest plugin for detecting inadvertent open file handles',
+    long_description=readme(),
     author='The Astropy Developers',
     author_email='astropy.team@gmail.com',
     url='https://astropy.org',
