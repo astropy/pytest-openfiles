@@ -3,6 +3,8 @@
 
 - No changes yet.
 
+- Force garbage collection before checking for open files. [#30]
+
 0.4.0 (2019-07-20)
 ==================
 
@@ -34,7 +36,6 @@
 ================
 
 - Remove test dependency on astropy. [#4]
-
 
 0.1 (2017-10-09)
 ================
