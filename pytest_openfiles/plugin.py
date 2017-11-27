@@ -3,8 +3,9 @@
 This plugin provides support for testing whether file-like objects are properly
 closed.
 """
-import imp
 import os
+import gc
+import imp
 
 try:
     import importlib.machinery as importlib_machinery
@@ -67,6 +68,13 @@ def pytest_runtest_teardown(item, nextitem):
 
     start_open_files = item.open_files
     del item.open_files
+
+    # We now force garbage collection - we need to do this because e.g. in cases
+    # where a memory mapped array was opened in the test and then goes out of
+    # scope at the end of the test, the original file may still be open but
+    # can be properly closed by forcing gc.collect(). This was found to be
+    # needed for astropy.io.fits.
+    gc.collect()
 
     open_files = _get_open_file_list()
 
