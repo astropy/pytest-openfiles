@@ -1,4 +1,4 @@
-0.2 (unreleased)
+0.2 (2017-12-07)
 ================
 
 - Remove test dependency on astropy. [#4]
