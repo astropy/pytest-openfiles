@@ -19,7 +19,7 @@ def readme():
 
 setup(
     name='pytest-openfiles',
-    version='0.2.0',
+    version='0.2.1.dev',
     license='BSD',
     description='Pytest plugin for detecting inadvertent open file handles',
     long_description=readme(),
