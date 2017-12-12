@@ -46,6 +46,26 @@ running tests with ``--open-files``, if a file is opened during the course of a
 unit test but that file is not closed before the test finishes, the test will
 fail.
 
+In some cases certain files are expected to remain open between tests. In order
+to prevent these files from causing tests to fail, they can be ignored using
+the configuration file variable ``open_files_ignore``. This variable is added
+to the ``[tool:pytest]`` section of a package's top-level ``setup.cfg`` file.
+
+Files can be ignored using a fully specified filename::
+
+    [tool:pytest]
+    open_files_ignore = "/home/user/monty/output.log"
+
+It is also possible to ignore files with a particular name regardless of where
+they reside in the file system::
+
+    [tool:pytest]
+    open_files_ignore = "output.log"
+
+In this example, all files named ``output.log`` will be ignored if they are
+found to remain open after a test completes.
+
+
 Development Status
 ------------------
 
