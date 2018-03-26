@@ -65,6 +65,21 @@ they reside in the file system::
 In this example, all files named ``output.log`` will be ignored if they are
 found to remain open after a test completes.
 
+It is also possible to ignore open files for particular test cases by
+decorating them with the ``openfiles_ignore`` decorator:
+
+.. code::
+
+    import pytest
+
+    @pytest.mark.openfiles_ignore
+    def test_open_file_and_ignore():
+        """We want to ignore this test when checking for open file handles."""
+
+
+The test function will not be skipped, but any files that are left open by the
+test will be ignored by this plugin.
+
 
 Development Status
 ------------------
