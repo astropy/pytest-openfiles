@@ -1,6 +1,8 @@
 0.2.1 (unreleased)
 ==================
 
+- Add decorator to skip detection of open files for particular tests. [#10]
+
 
 0.2 (2017-12-07)
 ================
