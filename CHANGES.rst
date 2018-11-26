@@ -1,4 +1,4 @@
-0.3.1 (unreleased)
+0.3.1 (2018-11-26)
 ==================
 
 - Fix a minor packaging issue. [#13]
