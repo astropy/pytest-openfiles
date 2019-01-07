@@ -1,3 +1,9 @@
+0.3.2 (unreleased)
+==================
+
+- Replace deprecated method to allow for compatibility with ``pytest-4.1`` and
+  later. [#19]
+
 0.3.1 (2018-11-26)
 ==================
 
