@@ -5,6 +5,7 @@ closed.
 """
 import imp
 import os
+import fnmatch
 
 from distutils.version import StrictVersion
 
@@ -97,14 +98,19 @@ def pytest_runtest_teardown(item, nextitem):
         ignore = False
 
         for ignored in open_files_ignore:
+
+            # Note that we use fnmatch rather than re for simplicity since
+            # we are dealing with file paths. In addition, we used to check
+            # for exact matches, and we need e.g. "astropy.log" to match
+            # only files with that exact name, and not e.g. "astropyxlog"
+            # which would happen if we switched to using regular expression.
+
             if not os.path.isabs(ignored):
-                if os.path.basename(filename) == ignored:
-                    ignore = True
-                    break
-            else:
-                if filename == ignored:
-                    ignore = True
-                    break
+                ignored = os.path.join('*', ignored)
+
+            if fnmatch.filter([filename], ignored):
+                ignore = True
+                break
 
         if ignore:
             continue
