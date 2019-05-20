@@ -108,7 +108,7 @@ def pytest_runtest_teardown(item, nextitem):
                 # */<original_path> to make sure it matches absolute paths.
                 ignored = os.path.join('*', ignored)
 
-            if fnmatch.filter([filename], ignored):
+            if fnmatch.fnmatch(filename, ignored):
                 ignore = True
                 break
 
