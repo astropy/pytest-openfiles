@@ -23,6 +23,7 @@ environment:
         platform: x64
 
       - PYTHON_VERSION: "3.5"
+        NUMPY_VERSION: "1.15"
         platform: x64
 
       - PYTHON_VERSION: "3.6"
