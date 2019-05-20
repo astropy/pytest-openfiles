@@ -100,12 +100,12 @@ def pytest_runtest_teardown(item, nextitem):
         for ignored in open_files_ignore:
 
             # Note that we use fnmatch rather than re for simplicity since
-            # we are dealing with file paths. In addition, we used to check
-            # for exact matches, and we need e.g. "astropy.log" to match
-            # only files with that exact name, and not e.g. "astropyxlog"
-            # which would happen if we switched to using regular expression.
+            # we are dealing with file paths - fnmatch works with the standard
+            # * and ? wildcards in paths.
 
             if not os.path.isabs(ignored):
+                # Since the path is not absolute, we convert it to
+                # */<original_path> to make sure it matches absolute paths.
                 ignored = os.path.join('*', ignored)
 
             if fnmatch.filter([filename], ignored):
