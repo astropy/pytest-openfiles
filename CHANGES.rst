@@ -1,3 +1,9 @@
+0.4 (unreleased)
+================
+
+- Added the ability to use ``*`` and ``?`` wildcards in
+  ``open_files_ignore``. [#22]
+
 0.3.2 (2019-01-07)
 ==================
 

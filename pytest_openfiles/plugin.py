@@ -5,6 +5,7 @@ closed.
 """
 import imp
 import os
+import fnmatch
 
 from distutils.version import StrictVersion
 
@@ -97,14 +98,19 @@ def pytest_runtest_teardown(item, nextitem):
         ignore = False
 
         for ignored in open_files_ignore:
+
+            # Note that we use fnmatch rather than re for simplicity since
+            # we are dealing with file paths - fnmatch works with the standard
+            # * and ? wildcards in paths.
+
             if not os.path.isabs(ignored):
-                if os.path.basename(filename) == ignored:
-                    ignore = True
-                    break
-            else:
-                if filename == ignored:
-                    ignore = True
-                    break
+                # Since the path is not absolute, we convert it to
+                # */<original_path> to make sure it matches absolute paths.
+                ignored = os.path.join('*', ignored)
+
+            if fnmatch.fnmatch(filename, ignored):
+                ignore = True
+                break
 
         if ignore:
             continue

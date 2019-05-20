@@ -63,7 +63,11 @@ they reside in the file system::
     open_files_ignore = "output.log"
 
 In this example, all files named ``output.log`` will be ignored if they are
-found to remain open after a test completes.
+found to remain open after a test completes. Paths and filenames can include
+``*`` and ``?`` as wildcards::
+
+    [tool:pytest]
+    open_files_ignore = "*.ttf"
 
 It is also possible to ignore open files for particular test cases by
 decorating them with the ``openfiles_ignore`` decorator:
@@ -88,7 +92,7 @@ Development Status
     :target: https://travis-ci.org/astropy/pytest-openfiles
     :alt: Travis CI Status
 
-.. image:: https://ci.appveyor.com/api/projects/status/944gtt7n0o1d6826/branch/master?svg=true 
+.. image:: https://ci.appveyor.com/api/projects/status/944gtt7n0o1d6826/branch/master?svg=true
     :target: https://ci.appveyor.com/project/Astropy/pytest-openfiles/branch/master
     :alt: Appveyor Status
 
