@@ -4,6 +4,9 @@
 - Added the ability to use ``*`` and ``?`` wildcards in
   ``open_files_ignore``. [#22]
 
+- Bumping requires pytest version to be 3.0. [#24]
+
+
 0.3.2 (2019-01-07)
 ==================
 

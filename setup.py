@@ -48,7 +48,7 @@ setup(
         'Topic :: Utilities',
     ],
     keywords=[ 'detect', 'open', 'file', 'handle', 'psutil', 'pytest', 'py.test' ],
-    install_requires=[ 'pytest>=2.8.0', 'psutil' ],
+    install_requires=[ 'pytest>=3.0', 'psutil' ],
     python_requires='>=2.7',
     entry_points={
         'pytest11': [

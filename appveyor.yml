@@ -15,11 +15,7 @@ environment:
 
   matrix:
       - PYTHON_VERSION: "2.7"
-        PYTEST_VESION: "2.8"
         PYTEST_COMMAND: "py.test"
-        platform: x64
-
-      - PYTHON_VERSION: "2.7"
         platform: x64
 
       - PYTHON_VERSION: "3.5"
