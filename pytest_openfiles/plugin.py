@@ -31,6 +31,7 @@ def pytest_addoption(parser):
                   "may be specified by their base name (ignoring their full "
                   "path) or by absolute path", type="args", default=())
 
+
 def pytest_configure(config):
 
     config.getini('markers').append(
@@ -61,6 +62,7 @@ def _get_open_file_list():
 
     return set(files)
 
+
 def pytest_runtest_setup(item):
 
     # Store a list of the currently opened files so we can compare
@@ -72,7 +74,7 @@ def pytest_runtest_setup(item):
             ignore = item.get_closest_marker('openfiles_ignore')
         else:
             ignore = item.get_marker('openfiles_ignore')
-        if ignore:
+        if not ignore:
             item.open_files = _get_open_file_list()
 
 
