@@ -3,7 +3,6 @@
 This plugin provides support for testing whether file-like objects are properly
 closed.
 """
-import imp
 import os
 import fnmatch
 
@@ -14,6 +13,7 @@ import pytest
 try:
     import importlib.machinery as importlib_machinery
 except ImportError:
+    import imp
     importlib_machinery = None
 
 _pytest_36 = LooseVersion(pytest.__version__) >= LooseVersion("3.6")
