@@ -4,6 +4,8 @@
 - Added the ability to use ``*`` and ``?`` wildcards in
   ``open_files_ignore``. [#22]
 
+- Fixed compatibility with pytest 4.2. [#20]
+
 0.3.2 (2019-01-07)
 ==================
 
