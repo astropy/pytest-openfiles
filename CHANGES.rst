@@ -1,5 +1,10 @@
-0.4 (2019-07-20)
-================
+0.5.0 (unreleased)
+==================
+
+- No changes yet.
+
+0.4.0 (2019-07-20)
+==================
 
 - Added the ability to use ``*`` and ``?`` wildcards in
   ``open_files_ignore``. [#22]
