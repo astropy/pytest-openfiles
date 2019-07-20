@@ -1,4 +1,4 @@
-0.4 (unreleased)
+0.4 (2019-07-20)
 ================
 
 - Added the ability to use ``*`` and ``?`` wildcards in
