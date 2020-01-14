@@ -10,8 +10,6 @@ core `astropy`_ project since it is of use more generally.
 .. _pytest: https://pytest.org/en/latest/
 .. _astropy: https://astropy.org/en/latest/
 
-**NOTE**: This plugin is not supported with Py2.7 on Win32 platforms.
-
 Motivation
 ----------
 
