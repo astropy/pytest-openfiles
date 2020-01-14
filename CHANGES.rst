@@ -1,7 +1,7 @@
 0.5.0 (unreleased)
 ==================
 
-- No changes yet.
+- Don't raise errors for files that are closed in teardown functions. [#28]
 
 0.4.0 (2019-07-20)
 ==================
