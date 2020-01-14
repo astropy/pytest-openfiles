@@ -78,7 +78,11 @@ def pytest_runtest_setup(item):
             item.open_files = _get_open_file_list()
 
 
-def pytest_runtest_teardown(item, nextitem):
+def pytest_runtest_makereport(item, call):
+
+    if call.when != 'teardown':
+        return
+
     # a "skipped" test will not have been called with
     # pytest_runtest_setup, so therefore won't have an
     # "open_files" member
