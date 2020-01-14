@@ -20,3 +20,16 @@ def test_skip_open_file_detection():
 def teardown():
     if fd is not None:
         fd.close()
+
+
+class TestClass:
+
+    def setup_method(self, method):
+        self.fd = open(os.path.join(PKG_DATA_DIR, 'data/open_file_detection.txt'))
+
+    def teardown_method(self, method):
+        self.fd.close()
+        self.fd = None
+
+    def test_pass(self):
+        self.fd.read(1)
