@@ -82,6 +82,13 @@ decorating them with the ``openfiles_ignore`` decorator:
 The test function will not be skipped, but any files that are left open by the
 test will be ignored by this plugin.
 
+Note that the check for open files happens *after* any teardown function or
+method relevant to a test has been run, so files that are left open by tests
+but which are closed in teardown functions or methods are not caught. While
+there are cases where it can be useful to do this, for example opening a
+file in ``setup_method`` and closing it in ``teardown_method``, we do not
+recommending relying on this behavior excessively.
+
 
 Development Status
 ------------------
