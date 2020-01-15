@@ -1,8 +1,8 @@
 include LICENSE.rst
 include README.rst
 include CHANGES.rst
-
 include setup.cfg
+include pyproject.toml
 
 recursive-include tests *
 

@@ -10,8 +10,6 @@ core `astropy`_ project since it is of use more generally.
 .. _pytest: https://pytest.org/en/latest/
 .. _astropy: https://astropy.org/en/latest/
 
-**NOTE**: This plugin is not supported with Py2.7 on Win32 platforms.
-
 Motivation
 ----------
 
@@ -91,10 +89,6 @@ Development Status
 .. image:: https://travis-ci.org/astropy/pytest-openfile.svg
     :target: https://travis-ci.org/astropy/pytest-openfiles
     :alt: Travis CI Status
-
-.. image:: https://ci.appveyor.com/api/projects/status/944gtt7n0o1d6826/branch/master?svg=true
-    :target: https://ci.appveyor.com/project/Astropy/pytest-openfiles/branch/master
-    :alt: Appveyor Status
 
 Questions, bug reports, and feature requests can be submitted on `github`_.
 
