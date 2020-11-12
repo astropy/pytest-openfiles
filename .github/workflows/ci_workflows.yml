@@ -14,36 +14,28 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - name: Python 3.6 and pytest 4.6 (Linux)
-            os: ubuntu-latest
+          - os: ubuntu-latest
             python-version: 3.6
             toxenv: py36-test-pytest46
-          - name: Python 3.6 and pytest 5.0 (Windows)
-            os: windows-latest
+          - os: windows-latest
             python-version: 3.6
             toxenv: py36-test-pytest50
-          - name: Python 3.7 and pytest 5.1 (MacOS X)
-            os: macos-latest
+          - os: macos-latest
             python-version: 3.7
             toxenv: py37-test-pytest51
-          - name: Python 3.7 and pytest 5.2 (Linux)
-            os: ubuntu-latest
+          - os: ubuntu-latest
             python-version: 3.7
             toxenv: py37-test-pytest52
-          - name: Python 3.8 and pytest 5.3 (Windows)
-            os: windows-latest
+          - os: windows-latest
             python-version: 3.8
             toxenv: py38-test-pytest53
-          - name: Python 3.8 and pytest 6.0 (Linux)
-            os: ubuntu-latest
+          - os: ubuntu-latest
             python-version: 3.8
             toxenv: py38-test-pytest60
-          - name: Python 3.9 and pytest 6.1 (MacOS X)
-            os: macos-latest
+          - os: macos-latest
             python-version: 3.9
             toxenv: py39-test-pytest61
-          - name: Python 3.9 and pytest dev (Linux)
-            os: ubuntu-latest
+          - os: ubuntu-latest
             python-version: 3.9
             toxenv: py39-test-pytestdev
 
