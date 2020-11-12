@@ -86,9 +86,9 @@ test will be ignored by this plugin.
 Development Status
 ------------------
 
-.. image:: https://travis-ci.com/astropy/pytest-openfile.svg
-    :target: https://travis-ci.com/astropy/pytest-openfiles
-    :alt: Travis CI Status
+.. image:: https://github.com/astropy/pytest-openfiles/workflows/CI/badge.svg
+    :target: https://github.com/astropy/pytest-openfiles/actions
+    :alt: CI Status
 
 Questions, bug reports, and feature requests can be submitted on `github`_.
 
