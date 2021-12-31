@@ -7,7 +7,7 @@ import os
 import gc
 import fnmatch
 
-from distutils.version import LooseVersion
+from packaging.version import Version
 
 import pytest
 
@@ -17,7 +17,7 @@ except ImportError:
     import imp
     importlib_machinery = None
 
-_pytest_36 = LooseVersion(pytest.__version__) >= LooseVersion("3.6")
+_pytest_36 = Version(pytest.__version__) >= Version("3.6")
 
 
 def pytest_addoption(parser):
