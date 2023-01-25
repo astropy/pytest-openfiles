@@ -22,6 +22,9 @@ of the core library would use this package anymore.
 After that, we will just do one last release of ``pytest-openfiles``
 and archive this repository.
 
+See https://docs.astropy.org/en/latest/development/testguide.html#testing-for-open-files
+on how to test for open files without this package.
+
 Motivation
 ----------
 
