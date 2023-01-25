@@ -10,6 +10,18 @@ core `astropy`_ project since it is of use more generally.
 .. _pytest: https://pytest.org/en/latest/
 .. _astropy: https://astropy.org/en/latest/
 
+IMPORTANT: Retirement Roadmap
+-----------------------------
+
+As of https://github.com/astropy/astropy/pull/14041 , this package is no
+longer used in ``astropy`` core library. We strongly advise any packages
+that still use this package to migrate away from it. When ``astropy`` 6.0
+is released (tentatively Nov 2023), none of the active development branches
+of the core library would use this package anymore.
+
+After that, we will just do one last release of ``pytest-openfiles``
+and archive this repository.
+
 Motivation
 ----------
 
