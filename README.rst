@@ -22,8 +22,22 @@ of the core library would use this package anymore.
 After that, we will just do one last release of ``pytest-openfiles``
 and archive this repository.
 
-See https://docs.astropy.org/en/latest/development/testguide.html#testing-for-open-files
-on how to test for open files without this package.
+To test for open files without this package, you can do this from the
+command line using the
+`-W option <https://docs.python.org/3/using/cmdline.html#cmdoption-W>`_::
+
+    pytest -W error::ResourceWarning
+
+Alternately, you can also use
+`pytest configuration file <https://docs.pytest.org/en/stable/reference/customize.html>`_.
+The following example is for ``setup.cfg``::
+
+    [tool:pytest]
+    filterwarnings =
+        error::ResourceWarning
+
+Also see https://docs.astropy.org/en/latest/development/testguide.html#testing-for-open-files
+on how to test for open files without this package when contributing to ``astropy``.
 
 Motivation
 ----------
