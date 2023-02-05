@@ -15,36 +15,36 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
-            python-version: 3.6
-            toxenv: py36-test-pytest46
+            python-version: 3.7
+            toxenv: py37-test-pytest46
           - os: windows-latest
-            python-version: 3.6
-            toxenv: py36-test-pytest50
+            python-version: 3.7
+            toxenv: py37-test-pytest50
           - os: macos-latest
-            python-version: 3.7
-            toxenv: py37-test-pytest51
-          - os: ubuntu-latest
-            python-version: 3.7
-            toxenv: py37-test-pytest52
-          - os: windows-latest
             python-version: 3.8
-            toxenv: py38-test-pytest53
+            toxenv: py38-test-pytest51
           - os: ubuntu-latest
             python-version: 3.8
-            toxenv: py38-test-pytest60
-          - os: macos-latest
+            toxenv: py38-test-pytest52
+          - os: windows-latest
             python-version: 3.9
-            toxenv: py39-test-pytest61
+            toxenv: py39-test-pytest53
           - os: ubuntu-latest
             python-version: 3.9
-            toxenv: py39-test-pytestdev
+            toxenv: py39-test-pytest62
+          - os: macos-latest
+            python-version: '3.10'
+            toxenv: py310-test-pytest72
+          - os: ubuntu-latest
+            python-version: '3.11'
+            toxenv: py311-test-pytestdev
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install Tox

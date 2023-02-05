@@ -4,6 +4,8 @@
 - Replaced ``distutils`` with ``packaging``; the latter now a required
   dependency. [#43]
 
+- Dropped support for Python 3.6. [#46]
+
 0.5.0 (2020-04-16)
 ==================
 
