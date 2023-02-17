@@ -10,6 +10,35 @@ core `astropy`_ project since it is of use more generally.
 .. _pytest: https://pytest.org/en/latest/
 .. _astropy: https://astropy.org/en/latest/
 
+IMPORTANT: Retirement Roadmap
+-----------------------------
+
+As of https://github.com/astropy/astropy/pull/14041 , this package is no
+longer used in ``astropy`` core library. We strongly advise any packages
+that still use this package to migrate away from it. When ``astropy`` 6.0
+is released (tentatively Nov 2023), none of the active development branches
+of the core library would use this package anymore.
+
+After that, we will just do one last release of ``pytest-openfiles``
+and archive this repository.
+
+To test for open files without this package, you can do this from the
+command line using the
+`-W option <https://docs.python.org/3/using/cmdline.html#cmdoption-W>`_::
+
+    pytest -W error::ResourceWarning
+
+Alternately, you can also use
+`pytest configuration file <https://docs.pytest.org/en/stable/reference/customize.html>`_.
+The following example is for ``setup.cfg``::
+
+    [tool:pytest]
+    filterwarnings =
+        error::ResourceWarning
+
+Also see https://docs.astropy.org/en/latest/development/testguide.html#testing-for-open-files
+on how to test for open files without this package when contributing to ``astropy``.
+
 Motivation
 ----------
 
