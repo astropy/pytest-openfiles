@@ -1,4 +1,4 @@
-0.6.0 (unreleased)
+0.6.0 (2024-06-05)
 ==================
 
 - Replaced ``distutils`` with ``packaging``; the latter now a required
