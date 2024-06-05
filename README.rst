@@ -2,6 +2,9 @@
 pytest-openfiles
 ================
 
+.. image:: https://zenodo.org/badge/104253678.svg
+  :target: https://zenodo.org/doi/10.5281/zenodo.11494706
+
 **IMPORTANT: 0.6.0 is the final release. This package is now archived and no longer being developed.**
 
 This package provides a plugin for the `pytest`_ framework that allows
