@@ -2,6 +2,8 @@
 pytest-openfiles
 ================
 
+**IMPORTANT: 0.6.0 is the final release. This package is now archived and no longer being developed.**
+
 This package provides a plugin for the `pytest`_ framework that allows
 developers to detect whether any file handles or other file-like objects were
 inadvertently left open at the end of a unit test. It has been moved from the
